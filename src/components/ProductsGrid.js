@@ -9,7 +9,7 @@ export default function ProductsGrid(props) {
     const a = false;
     return (
         <section className='products'>
-            <h2>{a? `Might also like`:null}</h2>
+            <h2>{a? `Might also like`:"Our Products"}</h2>
             <div className='products__grid'>
                 {productList}
             </div>

@@ -11,8 +11,10 @@ export default function Newsletter() {
             <div className="newsletter__text">
                 <p>Sign up for our newsletter and get 10% off your next order.</p>
                 <form action="">
-                <a href="/"><img src={arrow} alt="" className="newsletter__arrow" onClick={(event)=>{return event.preventDefault()}}/></a>
-                <input type="email" name="email" id="email" className="newsletter__input"/>
+                <div className='newsletter-input'>
+                    <a href="/"><img src={arrow} alt="" className="newsletter__arrow" onClick={(event)=>{return event.preventDefault()}}/></a>
+                    <input type="email" name="email" id="email" />
+                </div>
                 </form>
             </div>
         </section>
