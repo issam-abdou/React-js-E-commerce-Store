@@ -1,4 +1,4 @@
-/* أضف قواعد CSS هنا */
+
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;800&display=swap');*{
     margin: 0;
     padding: 0;
@@ -51,6 +51,13 @@ nav{
     display: flex;
     gap: 1.5rem;
 }
+
+@media (max-width:545px) {
+    .nav__list{
+        display: none;
+    }
+}
+
 .nav__link{
     transition: 0.3s ease;
 }
@@ -91,7 +98,6 @@ nav{
 
 }
 .hero__description{
-    /* flex-basis: calc(100% - 300px); */
     flex: 1;
 
 }
@@ -104,7 +110,7 @@ nav{
 }
 
 .hero__title{
-    font-size: 2.9rem; /*=62px*/
+    font-size: 2.9rem; 
     font-weight: 600;
     padding-right: 2rem;
     line-height: 1.3;
@@ -115,8 +121,12 @@ nav{
     font-weight: 300;
     padding-right: 10rem;
     margin-bottom: 3.5rem;
-   
     
+}
+@media (max-width:550px) {
+    .hero__text{
+        padding-right: 0rem;  
+    }
 }
 /* ----- Button ------- */
 .btn{
@@ -263,15 +273,29 @@ footer{
     padding-bottom: 5rem;
 }
 .footer__list{
-    display: flex;;
+    display: flex;
     gap: 1.5rem;
 }
 
+@media  (max-width:485px) {
+    .footer__list{
+        flex-direction: column;
+    }
+}
 /* ######### start: footer ########### */
 .details{
+    /*
     display: grid;
     grid-template-columns: repeat(8,1fr);
+    */
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    flex-wrap: wrap;
+}
 
+.det-imgs{
+    display: flex;
 }
 
 .details__images{
@@ -285,16 +309,27 @@ footer{
     margin-bottom: -70px;
 }
 .details__main-img{
+    /*
     grid-column: 2/5;
     align-self: center;
-    
+    */
+    flex-basis: 400px;
+    align-self: center;
+}
+
+.details__main-img img{
+    width: 100%;
 }
 .det-big{
-    width: 80%;
+    /* width: 80%; */
+    width: 400px;
 }
 .details__text{
+    /*
     grid-column: 5/9;
     align-self: center;
+    */
+    flex: 1;
 }
 .details__price{
     font-size: 2.375rem;
@@ -306,12 +341,15 @@ footer{
     font-size: 2.375rem;
 }
 .details__description{
-    padding-right: 10rem;
+    /* padding-right: 10rem; */
     line-height: 1.8;
     font-weight: 300;
     color: #606060;
     margin: 0.5rem 0 1rem;
 }
+
+
+    
 
 .lft{
     object-fit:none;
@@ -381,6 +419,24 @@ footer{
     padding: 1rem 1.5rem;
 }
 
+@media (max-width:900px){
+    .details{
+        flex-direction:column;
+    }
+    .details__main-img{
+        width: 90%;
+    }
+    .details__colors{
+        display: flex;
+        flex-direction: column;
+        align-items:center;
+        text-align: left;
+        gap: 10px;
+    }
+    .color-choice{
+        display: block;
+    }
+}
 /* ################ CART PAGE ################# */
 .cart{
     margin: 10rem 10rem 0 0;
@@ -393,12 +449,12 @@ footer{
 .cart__item{
     font-weight:300;
     padding: 3rem 0;
+    
     display: grid;
     grid-template-columns: repeat(13,1fr);
     align-items: center;
     justify-items: left;
     border-bottom: solid #E6E6E6 1px;
-
 }
 .item__img{
     width: 4rem;
@@ -416,6 +472,21 @@ footer{
     min-width: 0;
 }
 
+.delete-order{
+    font-weight: 700;
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin-left: 2rem;
+    padding: 1rem;
+}
+
+.btn-cart{
+    width: 11.8rem;
+    text-align: center;
+}
+
+
 /* ########## CART TOTAL ############" */
 .cart__total{
     display: grid;
@@ -424,6 +495,7 @@ footer{
     background-color: #F6F6F6;
     justify-items:left;
     padding: 3rem 0;
+    margin-bottom: 30px;
 }
 .total{
     padding-left: 2rem;
@@ -437,15 +509,4 @@ footer{
 .cart__total .btn{
     grid-column: span 3;
 } 
-.btn-cart{
-    width: 11.8rem;
-    text-align: center;
-}
-.delete-order{
-    font-weight: 700;
-    background: none;
-    border: none;
-    cursor: pointer;
-    margin-left: 2rem;
-    padding: 1rem;
-}
+

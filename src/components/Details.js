@@ -47,14 +47,15 @@ function Details(props) {
     }
     return (
         <div className='details'>
-            <div className='details__images'>
-                    <img className='det-sml' src={props.item.image} alt={props.item.name} />
-                    <img className='det-sml lft' src={props.item.image} alt={props.item.name} />
-                    <img className='det-sml rgt' src={props.item.image} alt={props.item.name} />
-            </div>
-            <div className='details__main-img'>
-                <img className='det-big' src={props.item.image} alt={props.item.name}/>
-            </div>
+                {/* <div className='details__images'>
+                        <img className='det-sml' src={props.item.image} alt={props.item.name} />
+                        <img className='det-sml lft' src={props.item.image} alt={props.item.name} />
+                        <img className='det-sml rgt' src={props.item.image} alt={props.item.name} />
+                </div> */}
+                <div className='details__main-img'>
+                    <img className='det-big' src={props.item.image} alt={props.item.name}/>
+                </div>
+           
             <div className='details__text'>
                 <h2 className='details__price'>{props.item.price}</h2>
                 <h2 className='details__name'>{props.item.name}</h2>
